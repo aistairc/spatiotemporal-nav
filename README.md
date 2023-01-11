@@ -15,4 +15,6 @@ python3 spatiotemporal.py -i [Path of input image] -o [Path of output directory 
 python3 spatiotemporal.py -i origin_pred_map/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240
 ```
 
-![sim trajectories](images/sim_setting_and_trajectories.png
+## **LICENSE:**
+
+
