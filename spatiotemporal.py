@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# Modifications copyright (C) 2023 <AIST/Yuta Sato>
+# Modifications copyright (C) 2023 AIST
 from enum import Enum
 from typing import List, NamedTuple, Callable, Optional, Union
 import random
