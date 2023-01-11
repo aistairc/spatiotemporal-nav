@@ -18,9 +18,9 @@ python3 spatiotemporal.py -i origin_pred_map/000/ -o output_dir --st_r 270 --st_
 ## **LICENSE:**
 This package uses code derived from davecom/ClasicComputerScienceProblemsInPython(Copyright 2018 David Kopec).
 The two contributions are as follows
-- Enabled input from images.
-- Implementation of spatiotemporal search.
-- Addition of robot simulation.
+- Enabled input from images
+- Implementation of spatiotemporal search
+- Addition of robot simulation
 (c) 2023 Yuta Sato
 
 
