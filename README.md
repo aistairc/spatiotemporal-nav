@@ -2,14 +2,6 @@
 
 ## Yuta Sato, Yoko Sasaki, Hiroshi Takemura
 
-## Spatiotemporal Navigation
-
-![overview](images/overview.png)
-
-We proposes a means of autonomous mobile robot navigation in dense crowds that is based on predicting the future trajectories of pedestrians.
-The method includes a pedestrian trajectory prediction for a running mobile robot and spatiotemporal path planning for when the crosses path with pedestrians.
-The predicted trajectories are converted into a time-series of cost maps, and the robot achieves smooth navigation without dodging to the right or left in crowds, path planner does not require long-term prediction.
-The results of an evaluation implementing this method in a real robot in a Science Museum show that the trajectory prediction works. Moreover, the proposed planning's arrival times decrease to 73.6% of conventional 2D path planning's arrival time in a simulation of navigation in a crowd of 50 people.
 
 ## **Using the code:**
 
