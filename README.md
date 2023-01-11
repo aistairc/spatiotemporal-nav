@@ -18,16 +18,17 @@ python3 spatiotemporal.py -i origin_pred_map/000/ -o output_dir --st_r 270 --st_
 ```
 
 ## **LICENSE:**
-All of the source code in this repository is released under the Apache License version 2.0. See LICENSE.
+Copyright 2023 National Institute of Advanced Industrial Science and Technology (AIST), Japan.
 
-This package uses code derived from davecom/ClasicComputerScienceProblemsInPython((c) 2018 David Kopec).
+This program is licensed under the Apache License, Version2.0.
+
+This program uses code derived from davecom/ClasicComputerScienceProblemsInPython((c) 2018 David Kopec).
 
 The three contributions are as follows
 - Enabled input from costmaps
 - Implementation of spatiotemporal search
 - Addition of robot simulation
 
-(c) 2023 AIST/Yuta Sato
 
 
 [davecom/ClassicComputerScienceProblemsInPython](https://github.com/davecom/ClassicComputerScienceProblemsInPython)
