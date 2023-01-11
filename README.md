@@ -19,6 +19,7 @@ python3 spatiotemporal.py -i origin_pred_map/000/ -o output_dir --st_r 270 --st_
 
 ## **LICENSE:**
 All of the source code in this repository is released under the Apache License version 2.0. See LICENSE.
+
 This package uses code derived from davecom/ClasicComputerScienceProblemsInPython((c) 2018 David Kopec).
 
 The three contributions are as follows
