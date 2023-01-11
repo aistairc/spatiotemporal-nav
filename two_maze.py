@@ -17,7 +17,7 @@ from enum import Enum
 from typing import List, NamedTuple, Callable, Optional, Union
 import random
 from math import sqrt
-from generic_search_towd import dfs, bfs, node_to_path, astar, astar_png, astar_three, Node
+from generic_search_two_d import dfs, bfs, node_to_path, astar, astar_png, astar_three, Node
 
 import glob
 import cv2
