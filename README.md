@@ -1,6 +1,8 @@
 # Spatiotemporal Navigation based on Pedestrian Trajectory Prediction in Dense Crowds
 
-## Yuta Sato, Yoko Sasaki, Hiroshi Takemura
+Spatiotemporal Navigation is planning method over multiple-time prediction maps with the future in mind.
+
+This method ensures smooth moving by considering future pedestrian position.
 
 ## **demo video:**
 
