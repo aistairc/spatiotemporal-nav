@@ -7,7 +7,8 @@ This method ensures smooth moving by considering future pedestrian position.
 ## **demo video:**
 
 
-https://user-images.githubusercontent.com/120366557/211988441-c04a7e78-3c66-48be-b7b8-bfcdeeb9a47c.mp4
+
+https://user-images.githubusercontent.com/120366557/211997803-a0c3b54d-4157-4a67-bd10-0d9f821c3899.mp4
 
 
 
