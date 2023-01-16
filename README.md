@@ -81,6 +81,9 @@ We shall not be responsible for any loss, damages and troubles when you use our 
 
 You can output png files for creating a demo video by running the following command.
 
+- two_maze.py is 2D-A*.
+- spatiotemporal.py is proposed method.
+
 ```bash
 python3 two_maze.py -i [Path of input image/origin] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
 python3 two_maze.py -i origin_pred_map/000/origin/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240
@@ -90,9 +93,13 @@ python3 two_maze.py -i origin_pred_map/000/origin/ -o output_dir --st_r 270 --st
 python3 spatiotemporal.py -i [Path of input image] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
 python3 spatiotemporal.py -i origin_pred_map/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240
 ```
-- Program
-  - 2D navigation
-  - Spatiotemporal navigation
+
+  
+  
+  
+  
+  
+  
 
 ## **LICENSE:**
 Copyright 2023 National Institute of Advanced Industrial Science and Technology (AIST), Japan.
