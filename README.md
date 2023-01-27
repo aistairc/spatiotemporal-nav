@@ -31,7 +31,9 @@ The detail of dataset is shown in the following table.
 
 
 The directory structure of dataset is shown in the following tree.
+
 "t" is the future time steps, with t = 0 being the current time.
+
 "T" is the current time.
 
 ```
