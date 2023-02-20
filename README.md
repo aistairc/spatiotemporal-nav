@@ -20,7 +20,7 @@ https://user-images.githubusercontent.com/120366557/211997803-a0c3b54d-4157-4a67
 You can output png files for creating a demo video by running the following command.
 
 - two_maze.py is 2D-A*.
-- spatiotemporal.py is proposed method.
+
 
 ```bash
 python3 two_maze.py -i [Path of input image/origin] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
@@ -28,7 +28,7 @@ python3 two_maze.py -i origin_pred_map/000/origin/ -o output_dir --st_r 270 --st
 python3 two_maze.py -i origin_pred_map/000/origin/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280  (2D-A*:2S→2G)
 python3 two_maze.py -i origin_pred_map/000/origin/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320   (2D-A*:3S→3G)
 ```
-
+- spatiotemporal.py is proposed method.
 ```bash
 python3 spatiotemporal.py -i [Path of input image] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
 python3 spatiotemporal.py -i origin_pred_map/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
