@@ -69,7 +69,7 @@ The directory structure of dataset is shown in the following tree.
 
 ```
 .
-├── 000 (1th dataset)
+├── 000 (1th scene)
 │   ├── 000 (T=0.05[s], predictive maps)
 │   │   ├── 00.png  (t=1)
 |   |   ...
@@ -86,7 +86,7 @@ The directory structure of dataset is shown in the following tree.
 |       ...
 │       └── 899.png
 ...
-└── 049 (50th dataset)
+└── 049 (50th scenes)
     ├── 000
     │   ├── 00.png
     |   ...
