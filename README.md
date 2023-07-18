@@ -86,13 +86,13 @@ The directory structure of dataset is shown in the following tree.
 ```
 .
 ├── 000 (1th scene)
-│   ├── 000 (T=0.05[s], prediction maps or true trajectory)
+│   ├── 000 (T=0.05[s], prediction maps[Dataset 1] or true trajectory[Dataset 2])
 │   │   ├── 00.png  (t=1)
 |   |   ...
 │   │   ├── 19.png  (t=20)
-│   │   └── vel.png (t=0, vel.png is an empty map because the t=0 map is not searched for implementation reasons)
+│   │   └── vel.png (vel.png is an empty map using as the start node [t=0 map])
 |   ...
-│   ├── 899 (T=45.0[s], prediction maps or true trajectory)
+│   ├── 899 (T=45.0[s], prediction maps[Dataset 1] or true trajectory[Dataset 2])
 │   │   ├── 00.png
 |   |   ...
 │   │   ├── 19.png
