@@ -1,6 +1,6 @@
 # STP4: Spatio Temporal Path Planning based on Pedestrian Trajectory Prediction in dense crowds
 
-This repository includes STP4 code with simulated crowds of people dataset in 2D space.
+This repository includes path planning methods with simulated crowds of people dataset in 2D space.
 
 - codes : 2D-A* search (two_maze.py) and STP4 (spatiotempral.py)
 - dataset : time-series of pedestrians' maps used for path planning codes
@@ -16,35 +16,34 @@ It can simulate robots navigation in dense crowds of pedestrian.
 https://user-images.githubusercontent.com/120366557/220135318-1b6ae2e7-c329-4853-ac9a-53303ea7f1af.mp4
 
 
-
 ## **Using the code:**
 
-You can output png files for creating a demo video by running the following command.
+You can output path planning results as png files for creating a demo video by running the following command.
 
-- Exec navigation with 2D-A*.
+- Execute navigation with 2D-A*.
 ```bash
 python3 two_maze.py -i [Path of input image/origin] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
 ```
-- Exec navigation with STP4.
+- Execute navigation with STP4.
 ```bash
 python3 spatiotemporal.py -i [Path of input image] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
 ```
 
 ### Examples
-- 2D-A* (2D-A* is the same result for both Dataset 1 and Dataset 2 for implementation reasons)
+- Execute 2D-A* (Results of 2D-A* are the same whether you execute it in Dataset 1 or Dataset 2, because it only uses the current time.)
 ```bash
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240  (2D-A*:1S→1G)
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280  (2D-A*:2S→2G)
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320   (2D-A*:3S→3G)
 ```
-- Execute STP4 on the prediction map
+- Execute STP4 on the prediction map (Dataset 1)
 ```bash
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280   (Proposed:2S→2G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320    (Proposed:3S→3G)
 ```
 
-- Execute STP4 on the true trajectory
+- Execute STP4 on the true trajectory (Dataset 2)
 ```bash
 python3 spatiotemporal.py -i 50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280   (Proposed:2S→2G)
@@ -59,6 +58,7 @@ python3 spatiotemporal.py -i 50pedestrians_50scenes_true_trajectory/000/ -o outp
 [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz(94MB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz)
 
 Datasets 1 and 2 are the same scene with the difference between predictions and true values.
+
 The parameters of Dataset 1 and Dataset 2 are shown in the following table. 
 
 |  Setting  |  Value  |
