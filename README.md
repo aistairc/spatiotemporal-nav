@@ -32,20 +32,20 @@ python3 spatiotemporal.py -i [Path of input image] -o [Path of output directory 
 ```
 
 ### Examples
-- Execute 2D-A* (Results of 2D-A* are the same whether you execute it in Dataset 1 or Dataset 2, because it only uses the current time.)
+- Execute 2D-A* with the above demo video setup. The -i option must be specified to use the current information. Since no future information is used, dataset1 and 2 will have the same result.
 ```bash
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240  (2D-A*:1S→1G)
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280  (2D-A*:2S→2G)
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320   (2D-A*:3S→3G)
 ```
-- Execute STP4 on the prediction map (Dataset 1)
+- Execute STP4 with the same scenario using the prediction map (Dataset 1)
 ```bash
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280   (Proposed:2S→2G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320    (Proposed:3S→3G)
 ```
 
-- Execute STP4 on the true trajectory (Dataset 2)
+- Execute STP4 with the same scenario using the ground truth map (Dataset 2)
 ```bash
 python3 spatiotemporal.py -i 50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280   (Proposed:2S→2G)
