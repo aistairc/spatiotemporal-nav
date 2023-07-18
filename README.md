@@ -6,7 +6,9 @@ This repository includes a spatiotemporal path planning code with simulated crow
 - codes : conventional A* search (two_maze.py) and the proposed spatiotemporal search (spatiotempral.py)
 - dataset : time-series of predicted pedestrians' maps used for path planning codes
 
-
+Please download the dataset from the following link.
+1. [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz(1.7GB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz)
+2. [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz(94MB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz)
 
 ## **demo video:**
 
@@ -21,8 +23,7 @@ https://user-images.githubusercontent.com/120366557/220135318-1b6ae2e7-c329-4853
 
 You can output png files for creating a demo video by running the following command.
 
-- two_maze.py is 2D-A*.
-
+- For 2D-A*.
 
 ```bash
 python3 two_maze.py -i [Path of input image/origin] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
@@ -30,7 +31,7 @@ python3 two_maze.py -i dense_crowds_dataset/50pedestrians_50scenes/000/origin/ -
 python3 two_maze.py -i dense_crowds_dataset/50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280  (2D-A*:2S→2G)
 python3 two_maze.py -i dense_crowds_dataset/50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320   (2D-A*:3S→3G)
 ```
-- spatiotemporal.py is proposed method.
+- For proposed method.
 ```bash
 python3 spatiotemporal.py -i [Path of input image] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
 python3 spatiotemporal.py -i dense_crowds_dataset/50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
@@ -38,7 +39,7 @@ python3 spatiotemporal.py -i dense_crowds_dataset/50pedestrians_50scenes/000/ -o
 python3 spatiotemporal.py -i dense_crowds_dataset/50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320    (Proposed:3S→3G)
 ```
 
-- spatiotemporal.py is proposed method with true trajectory.
+- For proposed method with true trajectory.
 ```bash
 python3 spatiotemporal.py -i [Path of input image] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
 python3 spatiotemporal.py -i dense_crowds_dataset/50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
@@ -47,12 +48,8 @@ python3 spatiotemporal.py -i dense_crowds_dataset/50pedestrians_50scenes_true_tr
 ```
 
 ## **Dense crowds dataset structure**
-Please download the dataset from the following link.
-1. [For 2D-A* and proposed method(1.7GB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz)
-2. [For proposed method with true trajectory(94MB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz)
 
-These dataset provides time series of 2D grid maps for path planning.  Dataset 1 is for 2D-A* and the proposed method and contains the prediction maps from the proposed method. Dataset 2 contains true trajectory instead of prediction maps.
-
+These datasets provide time series of 2D grid maps for path planning. Dataset 1 contains prediction maps and Dataset 2 contains true trajectory. The following items are common to both datasets 1 and 2.
 
 - Number of scenes : 50
 - Number of pedestrians : 50
@@ -80,13 +77,13 @@ The directory structure of dataset is shown in the following tree.
 ```
 .
 ├── 000 (1th scene)
-│   ├── 000 (T=0.05[s], predictive maps)
+│   ├── 000 (T=0.05[s], prediction maps or true trajectory)
 │   │   ├── 00.png  (t=1)
 |   |   ...
 │   │   ├── 19.png  (t=20)
 │   │   └── vel.png (t=0, vel.png is an empty map because the t=0 map is not searched for implementation reasons)
 |   ...
-│   ├── 899 (T=45.0[s], predictive maps)
+│   ├── 899 (T=45.0[s], prediction maps or true trajectory)
 │   │   ├── 00.png
 |   |   ...
 │   │   ├── 19.png
