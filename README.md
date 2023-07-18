@@ -2,12 +2,14 @@
 
 This repository includes path planning methods with simulated crowds of people dataset in 2D space.
 
-- codes : 2D-A* search (two_maze.py) and STP4 (spatiotempral.py)
-- dataset : time-series of pedestrians' maps used for path planning codes
-    1. Dataset 1: Prediction dataset - 50pedestrians * 50scenes
-[https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz(1.7GB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz)
-    2. Dataset 2: True trajectory dataset - 50pedestrians * 50scenes
-[https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz(94MB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz)
+- Codes : 2D-A* search (two_maze.py) and STP4 (spatiotempral.py)
+- Dataset : time-series of pedestrians' maps used for path planning codes
+
+  Dataset 1: Prediction map - 50pedestrians * 50scenes
+    [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz(1.7GB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz)
+
+  Dataset 2: True trajectory - 50pedestrians * 50scenes
+    [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz(94MB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz)
 
 ## **demo video:**
 
@@ -51,11 +53,13 @@ python3 spatiotemporal.py -i 50pedestrians_50scenes_true_trajectory/000/ -o outp
 ```
 
 ## **Dense crowds dataset structure**
-- dataset : time-series of pedestrians' maps used for path planning codes
-    1. Dataset 1: Prediction dataset 50pedestrians * 50scenes
-[https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz(1.7GB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz)
-    2. Dataset 2: True trajectory dataset 50pedestrians * 50scenes
-[https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz(94MB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz)
+- Dataset : time-series of pedestrians' maps used for path planning codes
+
+  Dataset 1: Prediction map - 50pedestrians * 50scenes
+    [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz(1.7GB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz)
+
+  Dataset 2: True trajectory - 50pedestrians * 50scenes
+    [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz(94MB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz)
 
 Datasets 1 and 2 are the same scene with the difference between predictions and true values.
 
