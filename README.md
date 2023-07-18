@@ -1,19 +1,15 @@
-# Spatiotemporal Navigation based on Pedestrian Trajectory Prediction in Dense Crowds
+# STP4: Spatio Temporal Path Planning based on Pedestrian Trajectory Prediction in dense crowds
 
+This repository includes STP4 code with simulated crowds of people dataset in 2D space.
 
-This repository includes a spatiotemporal path planning code with simulated crowds of people dataset in 2D space.
-
-- codes : conventional A* search (two_maze.py) and the proposed spatiotemporal search (spatiotempral.py)
-- dataset : time-series of predicted pedestrians' maps used for path planning codes
-
-Please download the dataset from the following link.
-1. [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz(1.7GB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz)
-2. [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz(94MB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz)
+- codes : 2D-A* search (two_maze.py) and STP4 (spatiotempral.py)
+- dataset : time-series of pedestrians' maps used for path planning codes
+    1. [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz(1.7GB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz). Dataset 1 contains prediction maps.
+    2. [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz(94MB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz). Dataset 2 contains true trajectory.
 
 ## **demo video:**
 
 It can simulate robots navigation in dense crowds of pedestrian.
-
 
 https://user-images.githubusercontent.com/120366557/220135318-1b6ae2e7-c329-4853-ac9a-53303ea7f1af.mp4
 
@@ -23,41 +19,47 @@ https://user-images.githubusercontent.com/120366557/220135318-1b6ae2e7-c329-4853
 
 You can output png files for creating a demo video by running the following command.
 
-- For 2D-A*.
-
+- Navigate with 2D-A*.
 ```bash
 python3 two_maze.py -i [Path of input image/origin] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
+```
+- Navigate with STP4.
+```bash
+python3 spatiotemporal.py -i [Path of input image] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
+```
+
+### For example
+- 2D-A*
+```bash
 python3 two_maze.py -i dense_crowds_dataset/50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240  (2D-A*:1S→1G)
 python3 two_maze.py -i dense_crowds_dataset/50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280  (2D-A*:2S→2G)
 python3 two_maze.py -i dense_crowds_dataset/50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320   (2D-A*:3S→3G)
 ```
-- For proposed method.
+- STP4
 ```bash
-python3 spatiotemporal.py -i [Path of input image] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
 python3 spatiotemporal.py -i dense_crowds_dataset/50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
 python3 spatiotemporal.py -i dense_crowds_dataset/50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280   (Proposed:2S→2G)
 python3 spatiotemporal.py -i dense_crowds_dataset/50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320    (Proposed:3S→3G)
 ```
 
-- For proposed method with true trajectory.
+- STP4 with true trajectory.
 ```bash
-python3 spatiotemporal.py -i [Path of input image] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
 python3 spatiotemporal.py -i dense_crowds_dataset/50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
 python3 spatiotemporal.py -i dense_crowds_dataset/50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280   (Proposed:2S→2G)
 python3 spatiotemporal.py -i dense_crowds_dataset/50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320    (Proposed:3S→3G)
 ```
 
 ## **Dense crowds dataset structure**
+These datasets provide time series of 2D grid maps for path planning.
+1. [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz(1.7GB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz). Dataset 1 contains prediction maps.
+2. [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz(94MB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz). Dataset 2 contains true trajectory.
 
-These datasets provide time series of 2D grid maps for path planning. Dataset 1 contains prediction maps and Dataset 2 contains true trajectory. The following items are common to both datasets 1 and 2.
-
-- Number of scenes : 50
-- Number of pedestrians : 50
-
-The detail of dataset is shown in the following table.
+The details of dataset 1 and dataset 2 are shown in the following table. Datasets 1 and 2 are the same scene with the difference between predictions and true values.
 
 |  Setting  |  Value  |
 | :----: | :----: |
+|  Number of scenes  | 50  |
+|  Number of pedestrians  | 50  |
 |  Pedestrians motion  |  ORCA  |
 |  Preferred velocity  |  1.0[m/s]  |
 |  Max. speed  |  2.0[m/s]  |
