@@ -4,9 +4,9 @@ This repository includes STP4 code with simulated crowds of people dataset in 2D
 
 - codes : 2D-A* search (two_maze.py) and STP4 (spatiotempral.py)
 - dataset : time-series of pedestrians' maps used for path planning codes
-    1. Dataset 1: Prediction dataset 50pedestrians * 50scenes
+    1. Dataset 1: Prediction dataset - 50pedestrians * 50scenes
 [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz(1.7GB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes.tar.xz)
-    2. Dataset 2: True trajectory dataset 50pedestrians * 50scenes
+    2. Dataset 2: True trajectory dataset - 50pedestrians * 50scenes
 [https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz(94MB)](https://data.airc.aist.go.jp/dense_crowds_dataset/50pedestrians_50scenes_true_trajectory.tar.xz)
 
 ## **demo video:**
@@ -31,20 +31,20 @@ python3 spatiotemporal.py -i [Path of input image] -o [Path of output directory 
 ```
 
 ### Examples
-- 2D-A*
+- 2D-A* (2D-A* is the same result for both Dataset 1 and Dataset 2 for implementation reasons)
 ```bash
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240  (2D-A*:1S→1G)
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280  (2D-A*:2S→2G)
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320   (2D-A*:3S→3G)
 ```
-- STP4
+- Execute STP4 on the prediction map
 ```bash
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280   (Proposed:2S→2G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320    (Proposed:3S→3G)
 ```
 
-- STP4 with true trajectory.
+- Execute STP4 on the true trajectory
 ```bash
 python3 spatiotemporal.py -i 50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280   (Proposed:2S→2G)
