@@ -41,14 +41,14 @@ python3 two_maze.py -i 50pedestrians_50scenes_true_trajectory/000/origin/ -o out
 python3 two_maze.py -i 50pedestrians_50scenes_true_trajectory/000/origin/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280  (2D-A*:2S→2G)
 python3 two_maze.py -i 50pedestrians_50scenes_true_trajectory/000/origin/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320   (2D-A*:3S→3G)
 ```
-- Execute STP4 with the same scenario using the prediction map (Dataset 1, Scene 000)
+- Execute STP4 for scene 000 with the same scenario using the prediction map (Dataset 1)
 ```bash
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280   (Proposed:2S→2G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320    (Proposed:3S→3G)
 ```
 
-- Execute STP4 with the same scenario using the ground truth map (Dataset 2, Scene 000)
+- Execute STP4 for scene 000 with the same scenario using the ground truth map (Dataset 2)
 ```bash
 python3 spatiotemporal.py -i 50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280   (Proposed:2S→2G)
