@@ -103,7 +103,7 @@ The directory structure of dataset is shown in the following tree.
 |   |
 |   ...
 |   |
-│   └── origin (2Dmap at T=0.05~45.0[s])
+│   └── origin (All pedestrians' maps on 000 scenes)
 │       ├── 000.png
 |       ...
 │       └── 899.png
