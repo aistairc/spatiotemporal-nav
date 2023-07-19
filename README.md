@@ -37,6 +37,9 @@ python3 spatiotemporal.py -i [Path of input image] -o [Path of output directory 
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240  (2D-A*:1S→1G)
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280  (2D-A*:2S→2G)
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320   (2D-A*:3S→3G)
+python3 two_maze.py -i 50pedestrians_50scenes_true_trajectory/000/origin/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240  (2D-A*:1S→1G)
+python3 two_maze.py -i 50pedestrians_50scenes_true_trajectory/000/origin/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280  (2D-A*:2S→2G)
+python3 two_maze.py -i 50pedestrians_50scenes_true_trajectory/000/origin/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320   (2D-A*:3S→3G)
 ```
 - Execute STP4 with the same scenario using the prediction map (Dataset 1, Scenes 000)
 ```bash
