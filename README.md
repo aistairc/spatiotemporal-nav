@@ -89,13 +89,13 @@ The directory structure of dataset is shown in the following tree.
 ```
 .
 ├── 000 (1th scene)
-│   ├── 000 (Predicted pedestrians' maps at T=0.05[s])
+│   ├── 000         (Predicted pedestrians' maps at T=0.05[s])
 │   │   ├── 00.png  (t=1)
 |   |   ...
 │   │   ├── 19.png  (t=20)
 │   │   └── vel.png (vel.png is an empty map using as the start node [t=0 map])
 |   ...
-│   ├── 500 (Predicted pedestrians' maps at T=25.05[s])
+│   ├── 500         (Predicted pedestrians' maps at T=25.05[s])
 │   │   ├── 00.png
 |   |   ...
 │   │   ├── 19.png
@@ -103,7 +103,7 @@ The directory structure of dataset is shown in the following tree.
 |   |
 |   ...
 |   |
-│   └── origin (All pedestrians' maps on 000 scenes)
+│   └── origin      (Current pedestrians' maps of the whole 000 scene)
 │       ├── 000.png
 |       ...
 │       └── 899.png
