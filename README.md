@@ -32,7 +32,7 @@ python3 spatiotemporal.py -i [Path of input scene DIR] -o [Path of output direct
 ```
 
 ### Examples
-- Execute 2D-A* with the above demo video setup. The -i option must be specified to use the current information. Since no future information is used, Dataset1 and 2 will have the same result. (Scene 000)
+- Execute 2D-A* with the above demo video setup on scene 000. The -i option must be specified to use the current information. Since no future information is used, Dataset1 and 2 will have the same result. 
 ```bash
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240  (2D-A*:1S→1G)
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280  (2D-A*:2S→2G)
