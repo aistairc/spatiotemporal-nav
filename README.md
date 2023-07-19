@@ -24,11 +24,11 @@ You can output path planning results as png files for creating a demo video by r
 
 - Execute navigation with 2D-A*.
 ```bash
-python3 two_maze.py -i [Path of input image/origin] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
+python3 two_maze.py -i [Path of input scense DIR (origin/ format)] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
 ```
 - Execute navigation with STP4.
 ```bash
-python3 spatiotemporal.py -i [Path of input image] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
+python3 spatiotemporal.py -i [Path of input scense DIR] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
 ```
 
 ### Examples
