@@ -24,15 +24,15 @@ You can output path planning results as png files for creating a demo video by r
 
 - Execute navigation with 2D-A*.
 ```bash
-python3 two_maze.py -i [Path of input scenes DIR (origin/ format)] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
+python3 two_maze.py -i [Path of input scene DIR (origin/ format)] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
 ```
 - Execute navigation with STP4.
 ```bash
-python3 spatiotemporal.py -i [Path of input scenes DIR] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
+python3 spatiotemporal.py -i [Path of input scene DIR] -o [Path of output directory for simulation images] --st_r [y of a start] --st_c [x of a start] --go_r [y of a goal] --go_c [x of a goal]
 ```
 
 ### Examples
-- Execute 2D-A* with the above demo video setup. The -i option must be specified to use the current information. Since no future information is used, Dataset1 and 2 will have the same result. (Scenes 000)
+- Execute 2D-A* with the above demo video setup. The -i option must be specified to use the current information. Since no future information is used, Dataset1 and 2 will have the same result. (Scene 000)
 ```bash
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240  (2D-A*:1S→1G)
 python3 two_maze.py -i 50pedestrians_50scenes/000/origin/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280  (2D-A*:2S→2G)
@@ -41,14 +41,14 @@ python3 two_maze.py -i 50pedestrians_50scenes_true_trajectory/000/origin/ -o out
 python3 two_maze.py -i 50pedestrians_50scenes_true_trajectory/000/origin/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280  (2D-A*:2S→2G)
 python3 two_maze.py -i 50pedestrians_50scenes_true_trajectory/000/origin/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320   (2D-A*:3S→3G)
 ```
-- Execute STP4 with the same scenario using the prediction map (Dataset 1, Scenes 000)
+- Execute STP4 with the same scenario using the prediction map (Dataset 1, Scene 000)
 ```bash
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280   (Proposed:2S→2G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes/000/ -o output_dir --st_r 270 --st_c 80 --go_r 130 --go_c 320    (Proposed:3S→3G)
 ```
 
-- Execute STP4 with the same scenario using the ground truth map (Dataset 2, Scenes 000)
+- Execute STP4 with the same scenario using the ground truth map (Dataset 2, Scene 000)
 ```bash
 python3 spatiotemporal.py -i 50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 160 --go_r 130 --go_c 240   (Proposed:1S→1G)
 python3 spatiotemporal.py -i 50pedestrians_50scenes_true_trajectory/000/ -o output_dir --st_r 270 --st_c 120 --go_r 130 --go_c 280   (Proposed:2S→2G)
